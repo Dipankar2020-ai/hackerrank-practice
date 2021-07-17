@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   long int p,d,m,s,sum=0,count=0;
+    cin>>p>>d>>m>>s;
+       int counter = 0, currentPrice=p;
+    while(s >= currentPrice){
+        counter++;
+        s -= currentPrice;
+        currentPrice = (currentPrice - d) >= m ? currentPrice - d : m;
+    }
+    cout<<counter;
+} 
